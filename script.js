@@ -156,6 +156,9 @@ addEventListener('mousemove', event => {
 });
 
 addEventListener('touchmove', event => {
+    if (event.touches.length === 1) {
+        event.preventDefault();
+    }
     let touch = event.touches.item(0);
     let mp = {x: touch.clientX, y: touch.clientY};
     move(mp);
