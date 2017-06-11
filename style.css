@@ -2,10 +2,17 @@
     white-space: pre;
     background-color: #55aaee;
     border-radius: 0.5em;
-    padding: 0.3em;
+    padding: 0.2em;
+    padding-right: 1em;
+    padding-bottom: 2em;
     position: absolute;
     -moz-user-select: none;
     font-size: 3em;
+}
+
+.text {
+    background-color: #99bbdd;
+    border-radius: 0.5em;
 }
 
 @keyframes ping {

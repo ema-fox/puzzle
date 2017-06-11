@@ -109,6 +109,9 @@ let sentence = rand_choice(sentences);
 var at_mouse, at_mouse_offset;
 
 function start(target, mp) {
+    if (target.classList.contains('text')) {
+        target = target.parentNode;
+    }
     if (target.classList.contains('piece')) {
         at_mouse = target;
         at_mouse_offset = minus({x: at_mouse.offsetLeft, y: at_mouse.offsetTop}, mp);
@@ -194,7 +197,7 @@ function tryout(ela, elb) {
             }
         }
         if (fits(sentence, foo)) {
-            ela.innerText += elb.innerText;
+            ela.firstChild.innerText += elb.innerText;
             elb.remove();
             return true;
         } else {
@@ -215,6 +218,9 @@ for (let c of sentence) {
     foo.classList.add('piece');
     foo.style.left = Math.random() * Math.max(window.innerWidth - 150, 200) | 0;
     foo.style.top = Math.random() * Math.max(window.innerHeight - 150, 200) | 0;
-    foo.innerText = c;
+    let bla = document.createElement('span');
+    bla.innerText = c;
+    bla.classList.add('text');
+    foo.insertBefore(bla, null);
     field.insertBefore(foo, null);
 }
