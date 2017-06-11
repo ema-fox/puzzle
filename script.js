@@ -144,7 +144,7 @@ addEventListener('mousedown', event => {
 addEventListener('touchstart', event => {
     let touch = event.touches.item(0);
     let mp = {x: touch.clientX, y: touch.clientY};
-    start(tocuh.target, mp);
+    start(touch.target, mp);
 });
 
 addEventListener('mousemove', event => {
