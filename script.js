@@ -162,7 +162,7 @@ addEventListener('touchmove', event => {
     let touch = event.touches.item(0);
     let mp = {x: touch.clientX, y: touch.clientY};
     move(mp);
-});
+}, {'passive': false});
     
 addEventListener('mouseup', event => {
     end();
