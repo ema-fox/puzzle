@@ -213,8 +213,8 @@ let field = document.getElementById('field');
 for (let c of sentence) {
     let foo = document.createElement('span');
     foo.classList.add('piece');
-    foo.style.left = Math.random() * (window.innerWidth - 150) | 0;
-    foo.style.top = Math.random() * (window.innerHeight - 150) | 0;
+    foo.style.left = Math.random() * Math.max(window.innerWidth - 150, 200) | 0;
+    foo.style.top = Math.random() * Math.max(window.innerHeight - 150, 200) | 0;
     foo.innerText = c;
     field.insertBefore(foo, null);
 }
