@@ -1,0 +1,24 @@
+.piece {
+    white-space: pre;
+    background-color: #55aaee;
+    border-radius: 0.5em;
+    padding: 0.3em;
+    position: absolute;
+    -moz-user-select: none;
+    font-size: 3em;
+}
+
+@keyframes ping {
+    form {
+        background-color: #55aaee;
+    }
+    to {
+        background-color: #3377aa;
+    }
+}
+
+.ping {
+    animation-duration: 0.3s;
+    animation-name: ping;
+    animation-direction: alternate;
+}
