@@ -8,6 +8,7 @@
     position: absolute;
     -moz-user-select: none;
     font-size: 3em;
+    font-family: monospace;
 }
 
 .text {
